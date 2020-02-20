@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-size: 62.5%;
 }
 ol, ul {
 	list-style: none;
@@ -49,11 +50,175 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@import url('https://fonts.googleapis.com/css?family=Cantarell:400i|Roboto+Mono|Teko:700&display=swap');
 * {
     box-sizing: border-box;
 }
-
-html, body {
-    height: 100%;
+@HeaderFont:'Cantarell', sans-serif;
+@BGfilter: rgba(50, 50, 50, 0.95);
+.background(){
+	color:white;
+	font-family:'Roboto Mono', monospace;
+	background-image: url('https://media1.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif?cid=790b7611f59655d31077b5f635a4e3ad3a0a28dc8bd5ea26&rid=giphy.gif');
+	background-size: cover;
+}
+.WrapFlex(){
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.Padding(){
+	width: 100%;
+	padding: 3%;
 }
 
+html, body {
+	height: 100%;
+	.background();	
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color:@BGfilter;
+	margin: 2%;
+
+	header{
+		.Padding();
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		div{
+			h1{
+				font-family: @HeaderFont;
+				font-size: 4rem;
+				font-weight: bold;
+				margin: 20px;
+			}
+		}
+	
+		nav{
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start;
+			a{
+				color:white;
+				font-size: 1.5rem;
+				padding: 10px;
+			}
+		}
+	
+	}//End of Header tag
+	
+	#Home{
+		.Padding();
+		padding: 0 10%;
+		font-size: 1.2rem;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		div{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			width:100%;
+			h3{
+				font-size: 1.5rem;
+				font-family: @HeaderFont;
+			}
+		}
+
+
+		div img{
+			width:90%;
+		}
+	}
+
+	#Work{
+		display: flex;
+		flex-direction: column;
+		font-size: 1.2rem;
+		.Padding();
+		summary{
+			h3{
+				font-size: 1.5rem;
+				font-family: @HeaderFont;
+			}
+		}
+		article{
+			border: solid 1px white;
+			margin: 2% 0;
+			.WrapFlex();
+			.intro{
+				background-color: white;
+				color: black;
+			}
+			figure{
+				display: flex;
+				justify-content: space-evenly;
+				width: 100%;
+				
+				div{
+					text-align: center;
+					padding: 10px 0;
+				}
+			}
+		}
+			
+	
+	}//end of #work tag
+	
+	#Skills{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		flex-wrap: nowrap;
+		.Padding();
+		div{
+			font-size: 1.2rem;
+			img{
+			width: 90%;
+			}
+			h3{
+				font-size: 1.6rem;
+				font-family: @HeaderFont;
+			}
+			ul{
+				padding: 3%;
+			}
+		}
+
+	}//end of skills tag
+
+	#Contact{
+		display: flex;
+		justify-content: center;
+		.Padding();
+		div{
+			font-size: 1.2rem;
+			padding: 0 3%;
+			.ContInfo{
+				display: flex;
+				align-self: flex-end;
+			}
+			ul{
+				display: flex;
+				align-items: flex-end;
+				li{
+					padding: 0 2%;
+					a{
+						color: white;
+					}
+				}
+			}
+		}
+	}//end of contact tag
+
+	footer{
+
+		text-align: center;
+		font-size: 1.1rem;
+		padding: 1%;
+	}
+}//end of .Container box
