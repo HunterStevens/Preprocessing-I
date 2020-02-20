@@ -153,6 +153,8 @@ html, body {
 		@media (max-width:500px){
 			.MobileFlex();
 			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
 		}
 	}//end of home tag
 
@@ -161,6 +163,14 @@ html, body {
 		flex-direction: column;
 		font-size: 1.2rem;
 		.Padding();
+		@media (max-width:500px){
+			.MobileFlex();
+			margin: 6% 0;
+			border-top: dashed 1px white;
+			border-bottom: dashed 1px white;
+			font-size:1rem;
+			text-align: center;
+		}
 		summary{
 			h3{
 				font-size: 1.5rem;
@@ -183,6 +193,7 @@ html, body {
 				div{
 					text-align: center;
 					padding: 10px 0;
+					width: 90%;
 				}
 			}
 		}
@@ -196,13 +207,18 @@ html, body {
 		justify-content: space-evenly;
 		flex-wrap: nowrap;
 		.Padding();
+		@media (max-width:500px){
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
 		div{
 			font-size: 1.2rem;
+			
 			img{
 			width: 90%;
-			@media (max-width:500px){
-				display: none;
-			}
 			}
 			h3{
 				font-size: 1.6rem;
@@ -211,9 +227,6 @@ html, body {
 			ul{
 				padding: 3%;
 			}
-		}
-		@media (max-width:500px){
-			.MobileFlex();
 		}
 	}//end of skills tag
 
@@ -227,9 +240,10 @@ html, body {
 			padding: 0 3%;
 			@media (max-width:500px){
 					padding-top: 5%;
+					.MobileFlex();
 				}
 			h3{
-				
+
 			}
 			.ContInfo{
 				display: flex;
