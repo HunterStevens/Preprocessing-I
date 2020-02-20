@@ -180,6 +180,12 @@ body {
   font-weight: bold;
   margin: 20px;
 }
+@media (max-width: 500px) {
+  .container header div h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
 .container header nav {
   display: flex;
   justify-content: flex-end;
@@ -189,6 +195,15 @@ body {
   color: white;
   font-size: 1.5rem;
   padding: 10px;
+}
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+  }
 }
 .container #Home {
   width: 100%;
@@ -212,6 +227,15 @@ body {
 }
 .container #Home div img {
   width: 90%;
+}
+@media (max-width: 500px) {
+  .container #Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
 }
 .container #Work {
   display: flex;
@@ -258,12 +282,25 @@ body {
 .container #Skills div img {
   width: 90%;
 }
+@media (max-width: 500px) {
+  .container #Skills div img {
+    display: none;
+  }
+}
 .container #Skills div h3 {
   font-size: 1.6rem;
   font-family: 'Cantarell', sans-serif;
 }
 .container #Skills div ul {
   padding: 3%;
+}
+@media (max-width: 500px) {
+  .container #Skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .container #Contact {
   display: flex;
@@ -274,6 +311,11 @@ body {
 .container #Contact div {
   font-size: 1.2rem;
   padding: 0 3%;
+}
+@media (max-width: 500px) {
+  .container #Contact div {
+    padding-top: 5%;
+  }
 }
 .container #Contact div .ContInfo {
   display: flex;
@@ -288,6 +330,14 @@ body {
 }
 .container #Contact div ul li a {
   color: white;
+}
+@media (max-width: 500px) {
+  .container #Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .container footer {
   text-align: center;
