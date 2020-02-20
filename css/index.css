@@ -197,6 +197,23 @@ body {
   padding: 10px;
 }
 @media (max-width: 500px) {
+  .container header nav a {
+    border-bottom: solid 1px white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+@media (max-width: 500px) {
+  .container header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
   .container header {
     display: flex;
     flex-direction: column;
@@ -341,10 +358,11 @@ body {
   align-items: flex-end;
 }
 .container #Contact div ul li {
-  padding: 0 2%;
+  padding: 0 10px;
 }
 .container #Contact div ul li a {
-  color: white;
+  color: #5858c0;
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   .container #Contact {
