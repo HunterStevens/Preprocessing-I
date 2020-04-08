@@ -1,1 +1,379 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-size: 62.5%;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Cantarell';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Cantarell Oblique'), local('Cantarell-Oblique'), url(https://fonts.gstatic.com/s/cantarell/v9/B50LF7ZDq37KMUvlO015iZJpNK4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v7/L0x5DF4xlVMF-BfR8bXMIjhLq3o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Teko Bold'), local('Teko-Bold'), url(https://fonts.gstatic.com/s/teko/v9/LYjCdG7kmE0gdRhYsCRgrQ.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  background-image: url('https://media1.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif?cid=790b7611f59655d31077b5f635a4e3ad3a0a28dc8bd5ea26&rid=giphy.gif');
+  background-size: cover;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(50, 50, 50, 0.95);
+  margin: 2%;
+}
+.container header {
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container header div h1 {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px;
+}
+@media (max-width: 500px) {
+  .container header div h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+.container header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.container header nav a {
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .container header nav a {
+    border-bottom: solid 1px white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+@media (max-width: 500px) {
+  .container header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+}
+.container #Home {
+  width: 100%;
+  padding: 3%;
+  padding: 0 10%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.container #Home div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.container #Home div h3 {
+  font-size: 1.5rem;
+  font-family: 'Cantarell', sans-serif;
+}
+.container #Home div img {
+  width: 90%;
+}
+@media (max-width: 500px) {
+  .container #Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
+.container #Work {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .container #Work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0;
+    border-top: dashed 1px white;
+    border-bottom: dashed 1px white;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+.container #Work summary h3 {
+  font-size: 1.5rem;
+  font-family: 'Cantarell', sans-serif;
+}
+.container #Work article {
+  border: solid 1px white;
+  margin: 2% 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container #Work article .intro {
+  background-color: white;
+  color: black;
+}
+.container #Work article figure {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container #Work article figure div {
+  text-align: center;
+  padding: 10px 0;
+  width: 90%;
+}
+.container #Skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .container #Skills {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.container #Skills div {
+  font-size: 1.2rem;
+}
+.container #Skills div img {
+  width: 90%;
+}
+.container #Skills div h3 {
+  font-size: 1.6rem;
+  font-family: 'Cantarell', sans-serif;
+}
+.container #Skills div ul {
+  padding: 3%;
+}
+.container #Contact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3%;
+}
+.container #Contact div {
+  font-size: 1.2rem;
+  padding: 0 3%;
+}
+@media (max-width: 500px) {
+  .container #Contact div {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container #Contact div .ContInfo {
+  display: flex;
+  align-self: flex-end;
+}
+.container #Contact div ul {
+  display: flex;
+  align-items: flex-end;
+}
+.container #Contact div ul li {
+  padding: 0 10px;
+}
+.container #Contact div ul li a {
+  color: #5858c0;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .container #Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container footer {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1%;
+}
